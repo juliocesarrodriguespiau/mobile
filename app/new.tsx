@@ -18,6 +18,7 @@ export default function NewMemory() {
     const [isPbulic, setIsPublic] = useState(false)
 
     async function openImagePicker() {
+
         try {
             const result = await ImagePicker.launchImageLibraryAsync({
                 mediaTypes: ImagePicker.MediaTypeOptions.Images,
@@ -31,7 +32,8 @@ export default function NewMemory() {
               }
         } catch (err) {
             // deu erro mas eu não tratei
-          }     
+          } 
+              
     }
 
     async function handleCreateMemory() {
